@@ -5,3 +5,4 @@ QuicktypeGPT only has 15M parameters (dim = 288, 6 layers, 6 heads and 6 kv head
 
 In the following sections, training data collection, pretraining and inference will be discussed. 
 
+# Training Data
