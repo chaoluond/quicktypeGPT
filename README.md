@@ -11,7 +11,18 @@ As I mentioned in the introduction, to train a small LLM we need to ensure it on
 Following the philosophy of **knowledge distillation**, I used ChatGPT 3.5 API to generate 30k two-person multi-turn conversations across 40+ common topics (e.g. travel, food, music, movie/TV, education, hobbies, family, sports, technology, books, etc.) Here we can also use other mature LLMs, for instance Llama 2 70B-chat or Google Gemini Ultra, to generate the conversations. Here is how I generated the train data:
 
 - Step 1. Use ChatGPT to "spawn" icebreaker questions based on conversation [topics](https://github.com/chaoluond/quicktypeGPT/blob/main/training_data/topics.txt). (generation [script](https://github.com/chaoluond/quicktypeGPT/blob/main/training_data/chatgpt_generate_icebreaker_question.py) and data process [script](https://github.com/chaoluond/quicktypeGPT/blob/main/training_data/extract_icebreaker_question.py)) In total, I used ChatGPT to generate 7k [icebreaker questions](https://github.com/chaoluond/quicktypeGPT/blob/main/training_data/icebreaker_questions.txt).  
-- Step 2. Use ChatGPT to generate two-person multi-turn conversations based on icebreaker questions. (generation [script](https://github.com/chaoluond/quicktypeGPT/blob/main/training_data/chatgpt_generate_conversation.py))  
+- Step 2. Use ChatGPT to generate two-person multi-turn conversations based on icebreaker questions. (generation [script](https://github.com/chaoluond/quicktypeGPT/blob/main/training_data/chatgpt_generate_conversation.py))
+
+For instance, the following conversation is generated using the icebreaker question of "What is your opinion on artificial intelligence":
+
+```
+Tom: what's your take on artificial intelligence?    
+Sarah: Hi I think artificial intelligence is a game-changer. It has the potential to revolutionize industries and solve complex problems.    
+Tom: That's true. But do you have any concerns about AI's impact on privacy?    
+Sarah: Privacy is definitely a concern. As AI becomes more advanced, we need robust regulations to protect personal data and ensure transparency.    
+Tom: I agree. Striking a balance between innovation and privacy protection is crucial for the widespread acceptance of AI.    
+Sarah: Absolutely, Privacy should never be compromised in the pursuit of technological advancements.
+```
 
 
 
