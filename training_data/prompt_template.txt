@@ -1,0 +1,3 @@
+Tom is learning English. Can you generate some written dialogues for him to practice English? 
+The dialogue is about "{topic}" Please use "Tom" and "Sarah" as two persons in the dialogue. 
+Can you generate 4 totally different dialogues?
