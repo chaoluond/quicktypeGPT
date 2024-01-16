@@ -10,8 +10,8 @@ As I mentioned in the introduction, to train a small LLM we need to ensure it on
 
 Following the philosophy of **knowledge distillation**, I used ChatGPT 3.5 API to generate 30k two-person multi-turn conversations across 40+ common topics (e.g. travel, food, music, movie/TV, education, hobbies, family, sports, technology, books, etc.) Here we can also use other mature LLMs, for instance Llama 2 70B-chat or Google Gemini Ultra, to generate the conversations. Here is how I generated the train data:
 
-- Step 1. Use ChatGPT to generate icebreaker questions based on topic seeds
-- Step 2. Use ChatGPT to generate two-person multi-turn conversations based on icebreaker questions from Step 1.  
+- Step 1. Use ChatGPT to generate icebreaker questions based on conversation [topics](https://github.com/chaoluond/quicktypeGPT/blob/main/training_data/topics.txt). (generation [script](https://github.com/chaoluond/quicktypeGPT/blob/main/training_data/chatgpt_generate_icebreaker_question.py) and post-generation process script) 
+- Step 2. Use ChatGPT to generate two-person multi-turn conversations based on icebreaker questions.  
 
 
 
