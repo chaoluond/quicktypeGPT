@@ -5,7 +5,8 @@ Popular large language models (LLMs) like ChatGPT 3.5/4, Claude 2, Google Gemini
 
 In the following sections, training data collection, pretraining and inference will be discussed. 
 
-# Training Data
+# Training
+## Training Data Collection
 As I mentioned in the introduction, to train a small LLM we need to ensure it only focuses on a small and specific task. For **QuicktypeGPT**, it is intended to help you to auto complete a reply based on a previous multi-turn conversation. Ideally, it will be integrated with keyword input method to help you type and reply quicker. 
 
 Following the philosophy of **knowledge distillation**, I used ChatGPT 3.5 API to generate 30k two-person multi-turn conversations across 40+ common topics (e.g. travel, food, music, movie/TV, education, hobbies, family, sports, technology, books, etc.) Here we can also use other mature LLMs, for instance Llama 2 70B-chat or Google Gemini Ultra, to generate the conversations. Here is how I generated the train data:
@@ -23,7 +24,7 @@ Sarah: Privacy is definitely a concern. As AI becomes more advanced, we need rob
 Tom: I agree. Striking a balance between innovation and privacy protection is crucial for the widespread acceptance of AI.    
 Sarah: Absolutely, Privacy should never be compromised in the pursuit of technological advancements.
 ```
-The train/val datasets can be downloaded from huggingface. 
+The train/val datasets can be downloaded from huggingface. ([link](https://huggingface.co/datasets/safetyllm/daily_conversations)) 
 
 
 
