@@ -39,6 +39,7 @@ After we have our own tokenizer, we can now go ahead to do the real training wor
 ```
 python train.py --vocab_source=custom --vocab_size=4096
 ```
+In `train.py`, you can adjust model configuration and training parameters. My model has `dim=6, n_layers=6, n_heads=6, n_kv_heads=6, max_seq_length=256`. 
 
 
 
