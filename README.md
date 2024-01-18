@@ -1,5 +1,5 @@
 # Introduction
-Popular large language models (LLMs) like ChatGPT 3.5/4, Claude 2, Google Gemini, and Meta Llama 70 are gigantic models which have tens or hunderends billions of parameters and require hundreds/thousands Gigbytes of memory and server-grade GPUs to train, finetune and inference. This sets a high bar for individual developers to quickly explore possibilities of LLMs and develop applications on top of it. Inspired by @karpathy's [llama2.c](https://github.com/karpathy/llama2.c) project, I trained a simple GPT model called **QuicktypeGPT** to **assist typing and completing daily conversations**. 
+Popular large language models (LLMs) like ChatGPT 3.5/4, Claude 2, Google Gemini, and Meta Llama 70 are gigantic models which have tens or hunderends billions of parameters and require hundreds/thousands Gigbytes of memory and server-grade GPUs to train, finetune and inference. This sets a high bar for individual developers to quickly explore possibilities of LLMs and develop applications on top of it. Inspired by @karpathy's [llama2.c](https://github.com/karpathy/llama2.c) project, I trained a simple GPT model called **QuicktypeGPT** to **assist typing and completing daily conversations**. This repository is forked from the llama2.c project.  
 
 **QuicktypeGPT** only has 15M parameters (dim = 288, 6 layers, 6 heads and 6 kv heads) and 27MB. The model is pre-trained on a single A40 GPU and can be inferenced through a pure C program on a laptop CPU (e.g. AMD, Intel) with decent quality and speed. This project is to demonstrate that (1) we do not need to train a very sophisticated LLM but can still achieve santisfactory performance if the LLM is only focused on a small and dedicated domain or task, (2) we can deploy small LLMs on edge devices (e.g. desktop, laptop, tablet or phone) to perform inference tasks without relying on the servers in the cloud. 
 
@@ -27,7 +27,11 @@ Sarah: Absolutely, Privacy should never be compromised in the pursuit of technol
 The train/val datasets can be downloaded from huggingface. ([link](https://huggingface.co/datasets/safetyllm/daily_conversations)) 
 
 ## Custom Tokenizer
-
+First of all, we need to train a new tokenizer based on all texts (training and validation datasets). We apply [Byte-Pair Encoding (BPE)](https://huggingface.co/learn/nlp-course/chapter6/5?fw=pt) to train our tokenizer. Since the train/val datasets are all English text and no special characters are used, I set the vocabulary size to be 4096. The vocabulary size for Llama2 is 32000. The use of a small vocabulary size has several advantages: (1) reduce model parameters and size; (2) increase train and inference speed. If your text is simple and easy words, a small vocabulary size should suffice to tokenize the text efficiently. Here is how I train the custom tokenizer:
+```
+python dataprocess.py train_vocab --vocab_size=4096
+python dataprocess.py pretokenize --vocab_size=4096
+```
 
 
 
