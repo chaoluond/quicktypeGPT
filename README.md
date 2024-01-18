@@ -32,6 +32,13 @@ First of all, we need to train a new tokenizer based on all texts (training and 
 python dataprocess.py train_vocab --vocab_size=4096
 python dataprocess.py pretokenize --vocab_size=4096
 ```
+`train_vocab` is to train our tokenizer and `pretokenize` is to tokenize train/val datasets for model training. The tokenized dataset will be saved as `.bin` files in the corresponding folder.  
+
+## Model Training
+After we have our own tokenizer, we can now go ahead to do the real training work. 
+```
+python train.py --vocab_source=custom --vocab_size=4096
+```
 
 
 
