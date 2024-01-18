@@ -50,6 +50,8 @@ I tried three different sampling strategies and they have different val loss.
 | Sample Strategy | Val Loss | 
 | ---------------- | -------- |
 | FIXED_BLOCK_SIZE | 1.73 | 
+| RAND_BLOCK_SIZE | 1.63 |
+| BOS_BLOCK_SIZE | 1.47 | 
 
 
 
