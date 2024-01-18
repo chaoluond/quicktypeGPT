@@ -39,7 +39,7 @@ After we have our own tokenizer, we can now go ahead to do the real training wor
 ```
 python train.py --vocab_source=custom --vocab_size=4096
 ```
-In `train.py`, you can adjust model configuration and training parameters. My model has `dim=6, n_layers=6, n_heads=6, n_kv_heads=6, max_seq_length=256`. 
+In `train.py`, you can adjust model configuration and training parameters. My model has `dim=6, n_layers=6, n_heads=6, n_kv_heads=6, max_seq_length=256`. `batch_size` specifies how many samples it uses to train the model independently and simulatenously for each training iteration. I notice that a smaller `batch_size` and `learning_rate` will produce a better model (in terms of lower val loss) if your train dataset is small. You can increase `dropout` to regularize the model if you see overfitting.  
 
 
 
