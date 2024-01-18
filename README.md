@@ -48,6 +48,7 @@ I tried three different sampling strategies and they have different val loss.
 - BOS_BLOCK_SAMPLE: Randomly select `batch_size` conversations in the training dataset. For each conversation, `max_seq_length + 1` words are truncated to create a data chunk. If the conversation does not have enough words, the next conversation will be truncated.
 
 | Sample Strategy | Val Loss | 
+| ---------------- | -------- |
 | FIXED_BLOCK_SIZE | 1.73 | 
 
 
