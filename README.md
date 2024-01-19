@@ -53,6 +53,6 @@ I tried three different sampling strategies and they have different val loss.
 | RAND_BLOCK_SIZE | 1.63 |
 | BOS_BLOCK_SIZE | 1.47 | 
 
-It turns out `BOS_BLOCK_SAMPLE` achieves the best training performance. I assume the reason is that the data chunk from `BOS_BLOCK_SAMPLE` is always sampled from the beginning of each coversation, which naturally gives more relevant context for the model to predict the next token compared to the other two sampling strategies.  
+It turns out `BOS_BLOCK_SAMPLE` achieves the best training performance. I assume the reason is that the data chunk from `BOS_BLOCK_SAMPLE` is always sampled from the beginning of each coversation, which naturally gives more relevant context for the model to predict the next token (e.g. P(x_i | x_1, x_2, ..., x_(i-1))) compared to the other two sampling strategies.  
 
 
