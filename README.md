@@ -55,4 +55,19 @@ I tried three different sampling strategies and they have different val loss.
 
 It turns out `BOS_BLOCK_SAMPLE` achieves the best training performance. I assume the reason is that the data chunk from `BOS_BLOCK_SAMPLE` is always sampled from the beginning of each coversation, which naturally gives more relevant context for the model to predict the next token (e.g. P(x_i | x_1, x_2, ..., x_(i-1))) compared to the other two sampling strategies.  
 
+# Inference
+`run.c` is a pure C program to load the pre-trained model and make an inference. Before that, we need to export our custom tokenizer to `.bin` format so that it can be read by `run.c`. 
+```
+python tokenizer.py --tokenizer-model=data/tok4096.model
+```
+This converts `tok4096.model` to `tok4096.bin`. 
+Comfile C file using
+```
+make run
+```
+Inference the model using the following command 
+```
+./run out/model.bin -z data/tok4096.bin -t 1.0 -p 0.9 -i "Tom: Hey do you like sports?    Sarah: Yes, I do. I enjoy playing soccer. How about you, ?    Tom: I'm a big fan of basketball. In fact, I've always wanted to take on the challenge of learning how to dunk.    Sarah: That sounds exciting! It requires a lot of practice and strength. I'm sure you can do it with determination.    Tom:"
+```
+
 
