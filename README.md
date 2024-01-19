@@ -76,6 +76,6 @@ I tested model inference on two CPU processers. Here are the performance
 | AMD EPYC 64-core | 160 |
 | Intel i9 | 135 | 
 
-The performance for Apple A-series and Qualcomm Snapdragon series will be added later. 
+The performance on mobile devices, espcially for Apple A-series and Qualcomm Snapdragon series, will be added later. 
 
 
