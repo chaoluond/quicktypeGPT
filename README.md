@@ -71,6 +71,10 @@ Inference the model using the following command
 ```
 
 I tested model inference on two CPU processers. Here are the performance
+| CPU | tok/s|
+|-----|-------|
+| AMD EPYC 64-core | 160 |
+| Intel i9 | 135 | 
 
 
 
