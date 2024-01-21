@@ -68,7 +68,7 @@ make run
 Inference the model using the following command 
 ```
 ./run out/quickertype.bin -z data/tok4096.bin -t 1.0 -p 0.95 -i "<Your Prompt>"
-
+```
 When I gave the following prompt (e.g. beginning of a conversation between Tom and Sarah):
 ```
 Tom: Hey do you like sports?    
