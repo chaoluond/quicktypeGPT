@@ -3,7 +3,7 @@ Popular large language models (LLMs) like ChatGPT 3.5/4, Claude 2, Google Gemini
 
 **QuicktypeGPT** only has 15M parameters (dim = 288, 6 layers, 6 heads and 6 kv heads) and 27MB. The model is pre-trained on a single A40 GPU and can be inferenced through a pure C program on a laptop CPU (e.g. AMD, Intel) with decent quality and speed. This project is to demonstrate that (1) we do not need to train a very sophisticated LLM but can still achieve santisfactory performance if the LLM is only focused on a small and dedicated domain or task, (2) we can deploy small LLMs on edge devices (e.g. desktop, laptop, tablet or phone) to perform inference tasks without relying on the servers in the cloud. 
 
-In the following sections, training data collection, pretraining and inference will be discussed. 
+In the following sections, training, inference and performance comparison will be discussed. 
 
 # Training
 ## Training Data Collection
