@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="asset/quicktypegpt.png" alt="Description of Image" width="400">
+  <img src="asset/quicktypegpt.png" alt="Description of Image" width="600">
 </p>
 
 # Introduction
