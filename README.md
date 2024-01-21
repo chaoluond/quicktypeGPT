@@ -67,9 +67,16 @@ make run
 ```
 Inference the model using the following command 
 ```
-./run out/quickertype.bin -z data/tok4096.bin -t 1.0 -p 0.95 -i "Tom: Hey do you like sports?    Sarah: Yes, I do. I enjoy playing soccer. How about you, ?    Tom: I'm a big fan of basketball. In fact, I've always wanted to take on the challenge of learning how to dunk.    Sarah:"
+./run out/quickertype.bin -z data/tok4096.bin -t 1.0 -p 0.95 -i "<Your Prompt>"
+
+When I gave the following prompt (e.g. beginning of a conversation between Tom and Sarah):
 ```
-Here is the response from the model:
+Tom: Hey do you like sports?    
+Sarah: Yes, I do. I enjoy playing soccer. How about you, ?    
+Tom: I'm a big fan of basketball. In fact, I've always wanted to take on the challenge of learning how to dunk.    
+Sarah:
+```
+Here is the how the model completes the remaining conversation:
 ```
 Tom: Hey do you like sports?
 Sarah: Yes, I do. I enjoy playing soccer. How about you, ?
