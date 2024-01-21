@@ -71,7 +71,13 @@ Inference the model using the following command
 ```
 Here is the response from the model:
 ```
-Tom: Hey do you like sports?    Sarah: Yes, I do. I enjoy playing soccer. How about you, ?    Tom: I'm a big fan of basketball. In fact, I've always wanted to take on the challenge of learning how to dunk.    Sarah: Yeah, it seems like a lot of fun. What sports do you find exciting about it? Tom: I enjoy watching soccer and watching football. The fast-paced sport is intense. Sarah: That's great. I'm more into sports with a team. The strategic thinking and coordination required are also quite thrilling. Tom: I completely agree. The demand is always intense and requires good coordination to complete the game.
+Tom: Hey do you like sports?
+Sarah: Yes, I do. I enjoy playing soccer. How about you, ?
+Tom: I'm a big fan of basketball. In fact, I've always wanted to take on the challenge of learning how to dunk.
+Sarah: Yeah, it seems like a lot of fun. What sports do you find exciting about it?
+Tom: I enjoy watching soccer and watching football. The fast-paced sport is intense.
+Sarah: That's great. I'm more into sports with a team. The strategic thinking and coordination required are also quite thrilling.
+Tom: I completely agree. The demand is always intense and requires good coordination to complete the game.
 ```
 
 I tested model inference on two CPU processers. Here are the performance
